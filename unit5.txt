@@ -1,0 +1,40 @@
+var user = prompt("You try to avoid someone but you made eye contact, what do you do? SMILE, TALK, HIDE, or RUN").toLowerCase();
+
+switch(user) {
+    case 'smile':
+        var kind = prompt("You seem very friendly, do you agree? (yes or no)").toLowerCase();
+        if (kind === 'yes') {
+            console.log("You are too kind!");
+        } else {
+            console.log("I think you are very kind");
+        }
+        break;
+    case 'talk':
+        var awkward = prompt('Is this conversation going to be awkward for you? (yes or no)').toLowerCase();
+        if (awkward === 'yes') {
+            console.log("You are corageous for initiating the conversation");
+        } else {
+            console.log("Good on you for sorting out your issues head on!");
+        }
+        break;
+    case 'hide':
+        var scared = prompt("Are you hiding because you are afraid of this person? (yes or no)").toLowerCase();
+        var solve = prompt("Do you thinking hiding is going to solve the issue? (yes or no)").toLowerCase();
+        if (scared && solve === 'yes') {
+            console.log("It's time to stand up for yourself. You can do it!");
+        } else {
+            console.log("Why are you hiding? Pluck up some courage and get back out there!");
+        }
+        break;
+    case 'run':
+        var fast = prompt("Are you a fast runner?").toLowerCase();
+        var work = prompt("Do you think running will help you avoid the situation this time?").toLowerCase();
+        if (fast || work === 'yes') {
+            console.log("You might be able to avoid them just this once");
+        } else {
+            console.log("You might not be that lucky in escaping but good luck!");
+        }
+        break;
+    default:
+        console.log("Please enter SMILE, TALK, HIDE, or RUN");
+}
